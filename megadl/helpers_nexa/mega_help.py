@@ -80,20 +80,20 @@ def TimeFormatter(milliseconds: int) -> str:
 
 
 # Checking log channel
-def check_logs():
-    if Config.LOGS_CHANNEL != -1234567:
-        c_info = client.get_chat(chat_id=Config.LOGS_CHANNEL)
-        if c_info.type != "channel":
-            print(ERROR_TEXT.format("Chat is not a channel"))
-            return
-        elif c_info.username is not None:
-            print(ERROR_TEXT.format("Chat is not private"))
-            return
-        else:
-            client.send_message(chat_id=Config.LOGS_CHANNEL, text="`Mega.nz-Bot has Successfully Started!` \n\n**Powered by @NexaBotsUpdates**")
-    else:
-        print("No Log Channel ID is Given. Anyway I'm Trying to Start!")
-        pass
+# def check_logs():
+#     if Config.LOGS_CHANNEL != -1234567:
+#         c_info = client.get_chat(chat_id=Config.LOGS_CHANNEL)
+#         if c_info.type != "channel":
+#             print(ERROR_TEXT.format("Chat is not a channel"))
+#             return
+#         elif c_info.username is not None:
+#             print(ERROR_TEXT.format("Chat is not private"))
+#             return
+#         else:
+#             client.send_message(chat_id=Config.LOGS_CHANNEL, text="`Mega.nz-Bot has Successfully Started!` \n\n**Powered by @NexaBotsUpdates**")
+#     else:
+#         print("No Log Channel ID is Given. Anyway I'm Trying to Start!")
+#         pass
 
 
 # Send Download or Upload logs in log channel
