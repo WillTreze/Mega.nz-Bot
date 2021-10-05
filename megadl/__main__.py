@@ -14,6 +14,6 @@ if __name__ == "__main__" :
         os.makedirs(Config.DOWNLOAD_LOCATION)
     meganzbot.start()
     print(PROCESS_TEXT.format("Checking Log Channel ..."))
-#     check_logs()
+    check_logs()
     print(START_TEXT)
     idle()
